@@ -29,6 +29,12 @@
           {{- with .Params.Author -}}
             <span class="post-author">{{ . }}</span>
           {{- end -}}
+          {{ if .Params.demo }}
+            <span class="post-author"><a href="{{ .Params.demo }}">Demo</a></span>
+          {{ end }}
+          {{ if .Params.sourceCode }}
+            <span class="post-author"><a href="{{ .Params.sourceCode }}">Source</a></span>
+          {{ end }}
         </div>
 
         {{ if .Params.tags }}
